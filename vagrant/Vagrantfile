@@ -35,11 +35,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    
     cp /srv/hosts/myhost.dev/vagrant/www.conf /etc/php5/fpm/pool.d/www.conf
     cp /srv/hosts/myhost.dev/vagrant/default /etc/nginx/sites-available/default
-    chown vagrant /etc/php5/fpm/pool.d/www.conf /etc/nginx/sites-available/default
-   
-    #OJO; He editado /etc/php5/fpm/pool.d/www.conf y he cambiado listen = /var/run/php5-fpm.sock luego restart
-    #OJO; HE editado la configuración de nginx /etc/nginx/sites-enabled cutremente
-
+    chown vagrant /etc/nginx/sites-available/default
+    sudo service nginx restart
+    sudo service php5-fpm restart   
 
   shell
 end

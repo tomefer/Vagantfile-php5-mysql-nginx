@@ -2,7 +2,7 @@ server {
 	listen 80 default_server;
 	listen [::]:80 default_server ipv6only=on;
 
-	root /srv/hosts/your-host;
+	root /srv/hosts/myhost.dev;
 	index index.html index.htm index.php;
 
 	server_name localhost;
